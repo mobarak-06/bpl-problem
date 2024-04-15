@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPL Action</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <nav class="text-2xl font-semibold flex justify-around pt-5 pb-12 mb-5  bg-gray-400">
+     <h1>Budget: <span id="Budget">2500</span>$</h1>
+     <h1>Cart: <span id="cart">0</span></h1>
+     <h1>Left: <span id="left">6</span></h1>
+    </nav>
+    <main class="flex justify-around">
+        <!-- player container -->
+        <div class=" grid grid-cols-2 gap-4">
+           <div class="player-btn text-2xl border shadow-2xl text-center  w-52 ">
+            <h5>Tamim Iqbal</h5>
+            <h5>Price: <span>300</span>$</h5>
+            <h5>Category: <span>Bat</span></h5>
+            <button class="btn">Add to cart</button>
+           </div>
+           <div class="player-btn text-2xl border shadow-2xl text-center  w-52">
+            <h5>Shakib Al Hasan</h5>
+            <h5>Price: <span>300</span>$</h5>
+            <h5>Category: <span>All</span></h5>
+            <button class="btn">Add to cart</button>
+           </div>
+           <div class="player-btn text-2xl border shadow-2xl text-center  w-52">
+            <h5>Mushfiq</h5>
+            <h5>Price: <span>200</span>$</h5>
+            <h5>Category: <span>Bat</span></h5>
+            <button class="btn">Add to cart</button>
+           </div>
+           <div class="player-btn text-2xl border shadow-2xl text-center  w-52">
+            <h5>Liton Das</h5>
+            <h5>Price: <span>300</span>$</h5>
+            <h5>Category: <span>Bat</span></h5>
+            <button class="btn">Add to cart</button>
+           </div>
+           <div class="player-btn text-2xl border shadow-2xl text-center  w-52">
+            <h5>Shanto</h5>
+            <h5>Price: <span>400</span>$</h5>
+            <h5>Category: <span>Bat</span></h5>
+            <button class="btn">Add to cart</button>
+           </div>
+           <div class="player-btn text-2xl border shadow-2xl text-center  w-52">
+            <h5>Mustafiz</h5>
+            <h5>Price: <span>400</span>$</h5>
+            <h5>Category: <span>Ball</span></h5>
+            <button class="btn">Add to cart</button>
+           </div>
+           <div class="player-btn text-2xl border shadow-2xl text-center  w-52">
+            <h5>Taskin</h5>
+            <h5>Price: <span>400</span>$</h5>
+            <h5>Category: <span>Ball</span></h5>
+            <button class="btn">Add to cart</button>
+           </div>
+           <div class="player-btn text-2xl border shadow-2xl text-center  w-52">
+            <h5>Shoriful</h5>
+            <h5>Price: <span>300</span>$</h5>
+            <h5>Category: <span>Bat</span></h5>
+            <button class="btn">Add to cart</button>
+           </div>
+           <div class="player-btn text-2xl border shadow-2xl text-center  w-52">
+            <h5>Towhid Ridoy</h5>
+            <h5>Price: <span>300</span>$</h5>
+            <h5>Category: <span>Bat</span></h5>
+            <button class="btn">Add to cart</button>
+           </div>
+           <div class="player-btn text-2xl border shadow-2xl text-center  w-52">
+            <h5>Mehedi Miraz</h5>
+            <h5>Price: <span>300</span>$</h5>
+            <h5>Category: <span>Bat</span></h5>
+            <button class="btn">Add to cart</button>
+           </div>
+        </div>
+        <!-- My Cart container -->
+        <div class="cart-container shadow-2xl h-96 text-center items-center p-10 ">
+            <h2 class="text-4xl font-semibold">My Cart</h2>
+            <hr />
+            <div class="flex gap-8 mt-2">
+                <div class="name">Name</div>
+                <div class="price">Price</div>
+                <div class="category">Category</div>
+            </div>
+            <div id="selected player container" >
+            </div>
+            <hr/>
+            <h3  class="text-2xl font-semibold">Total Cost <span id="total-cost">0</span>$</h3>
+            <hr />
+            <div class="coupon-code">
+                <input id="coupon-code" type="text" placeholder="Coupon Code">
+                <button onclick="updateCouponCode('apply-btn')" id="apply-btn " class="bg-slate-200 rounded-lg p-2 ">Apply</button>
+            </div>
+            <hr />
+            <h3  class="text-2xl font-semibold">Grand Total: <span id="grand-total">0</span>$</h3>
+          
+        </div>
+    </main>
+    <script src="js/utility.js"></script>
+    <script src="js/bpl.js"></script>
+</body>
+</html>

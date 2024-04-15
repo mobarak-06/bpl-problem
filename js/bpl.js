@@ -13,22 +13,32 @@ for (const btn of allBtn) {
         event.target.setAttribute('disabled',false)
 
        
-        // const firstCart = getConvertedValue('left');
-        // if (firstCart -1 < 0) {
-        //     alert('limit finish left');
-        //     return;
-        // }
+        const firstCart = getConvertedValue('left');
+        if (firstCart -1 < 0) {
+            alert('limit finish left');
+            return;
+        }
      
      
         
      
+        // const budget = getConvertedValue('Budget');
+        // const updatedBudget = budget - parseInt(price);
+        // const showBudget =  document.getElementById('Budget').innerText=updatedBudget;
+        // if (showBudget < 0) {
+        //     alert('finish budget');
+        //     return 
+        // }
+
         const budget = getConvertedValue('Budget');
         const updatedBudget = budget - parseInt(price);
-        const showBudget =  document.getElementById('Budget').innerText=updatedBudget;
-        if (showBudget < 0) {
-            alert('finish budget');
-            return 
+
+        if (updatedBudget < 0) {
+        alert('Finish your budget');
+       return;
         }
+
+       document.getElementById('Budget').innerText = updatedBudget;
      
         
         event.target.parentNode.style.backgroundColor = 'green'

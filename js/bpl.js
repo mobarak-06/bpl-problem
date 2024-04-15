@@ -13,9 +13,9 @@ for (const btn of allBtn) {
         event.target.setAttribute('disabled',false)
 
        
-        const firstCart = getConvertedValue('left');
-        if (firstCart -1 < 0) {
-            alert('limit finish left');
+        const firstCart = getConvertedValue('cart');
+        if (firstCart + 1 > 6) {
+            alert('cart limit finish ');
             return;
         }
      
